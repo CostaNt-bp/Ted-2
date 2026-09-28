@@ -76,4 +76,5 @@ Essa exceção é utilizada quando a operação informada é válida, porém os 
 Entre os casos tratados estão números negativos, valor zero em operações de MDC ou quantidade insuficiente de parâmetros numéricos.
 
 Com essas validações e tratamentos, o sistema consegue evitar falhas durante a execução e fornecer um processamento mais organizado e confiável das operações solicitadas.
+
 SUBMISSÃO # 1618260
