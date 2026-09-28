@@ -78,3 +78,76 @@ Entre os casos tratados estão números negativos, valor zero em operações de 
 Com essas validações e tratamentos, o sistema consegue evitar falhas durante a execução e fornecer um processamento mais organizado e confiável das operações solicitadas.
 
 SUBMISSÃO # 1618260
+
+Solução Python — Central Recursiva Robusta
+
+import sys
+class OperacaoInvalidaError(Exception):
+pass
+class EntradaInvalidaError(Exception):
+pass
+def mdc
+_
+recursivo(a, b):
+if b == 0:
+return a
+return mdc
+_
+recursivo(b, a % b)
+def soma
+_
+digitos
+_
+recursivo(n):
+if n < 10:
+return n
+return (n % 10) + soma
+_
+digitos
+_
+recursivo(n // 10)
+def main():
+input
+_
+data = sys.stdin.read().splitlines()
+if not input
+data:
+_
+return
+linhas = [linha.strip() for linha in input
+_
+data if linha.strip()]
+if not linhas:
+return
+q = int(linhas[0])
+for i in range(1, q + 1):
+if i >= len(linhas):
+break
+linha = linhas[i]
+partes = linha.split()
+if not partes:
+continue
+operacao = partes[0]
+try:
+# Validação do tipo de operação
+if operacao not in ('M'
+,
+'S'):
+raise OperacaoInvalidaError()
+# Operação M: MDC
+if operacao ==
+'M'
+:
+if len(partes) != 3:
+raise EntradaInvalidaError()
+try:
+a = int(partes[1])
+b = int(partes[2])
+except ValueError:
+raise EntradaInvalidaError()
+if a <= 0 or b <= 0:
+raise EntradaInvalidaError()
+print(f"MDC = {mdc
+_
+recursivo(a, b)}")
+
